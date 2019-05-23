@@ -71,12 +71,27 @@ function  consumerdo() {
                 {topic: 'CAR_NUMBER', partition: 0,offset:parkTopicsNum}
             ],
             {
+                groupId: 'kafka-node-group',//使用者组ID，默认`kafka-node-group` 
+                //自动提交配置 
                 autoCommit: false,
-                fromOffset:true
+                autoCommitIntervalMs: 5000,
+                //最长等待时间是最长时间如果在发出请求时数据不足,则以毫秒为单位阻止等待，默认为100ms
+                 fetchMaxWaitMs: 100,
+                //  //这是必须可用于提供响应的消息的最小字节数，默认为1字节 
+                fetchMinBytes: 1,
+                // 要包含在此分区的消息集中的最大字节数。这有助于限制响应的大小.
+                fetchMaxBytes: 1024 * 1024,
+                // 如果设置为true，则consumer将从有效负载中的给定偏移量中获取消息 
+                fromOffset: true,
+                // 如果设置为“buffer”，则值将作为原始缓冲区对象返回。
+                encoding: 'utf8',
+                keyEncoding: 'utf8'
             }
         );
+    
         consumer.on('message', function (message) {
-      
+       
+          
             if(message.offset>parkTopicsNum){
                 //偏移值+1
                 parkTopicsNum += 1;

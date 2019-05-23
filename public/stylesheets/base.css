@@ -1,0 +1,74 @@
+	@media screen and (max-width:321px){
+	    .m-navlist{font-size:15px}
+	}
+
+	@media screen and (min-width:321px) and (max-width:400px){
+	    .m-navlist{font-size:16px}
+	}
+
+	@media screen and (min-width:400px){
+	    .m-navlist{font-size:18px}
+	}
+	@media screen and (min-width: 1201px) { 
+	#login {width: 30%;} 
+	} 
+	/* css注释：设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */ 
+
+	@media screen and (max-width: 1200px) { 
+	#login {width: 35%;} 
+	} 
+	/* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */ 
+
+	@media screen and (max-width: 901px) { 
+	#login {width: 50%;} 
+	} 
+	/* 设置了浏览器宽度不大于901px时 abc 显示200px宽度 */ 
+
+	@media screen and (max-width: 500px) { 
+	#app {width: 100%;} 
+	} 
+	body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+	    margin: 0;
+	    padding: 0;
+	    font-family: Microsoft YaHei;
+    }
+	.uf{
+		display: -webkit-flex !important;
+		display: flex !important;
+		position:relative;
+	}
+
+	._uf_center{
+		align-items: center;
+		justify-content: center;
+	}
+	.button {  
+	    display: inline-block;  
+	    zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */  
+
+	    vertical-align: baseline;  
+	    margin: 0.2rem 0.2rem;  
+	    outline: none;  
+	    cursor: pointer;  
+	    text-align: center;  
+	    text-decoration: none;  
+	    font-size:0.2em;  
+	    padding: .5em 2em .55em;  
+	    text-shadow: 0 1px 1px rgba(0,0,0,.3);  
+	    -webkit-border-radius: .5em;   
+	    -moz-border-radius: .5em;  
+	    border-radius: .5em;  
+	    color: #fff; 
+	    background: #e77005;  
+	}  
+	.button:hover {  
+	    text-decoration: none;  
+	}  
+	.button:active {  
+	    position: relative;  
+	    top: 1px;  
+	} 
+	.gray {   
+	   
+	    background: #ccc;  
+	}  

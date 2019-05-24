@@ -12,8 +12,8 @@ var producer = new Producer(client, {
     requireAcks: 1
 });
 var count = 0;
-// var client= redis.createClient(6379,"47.105.36.188",{password:"test123"});
-var client= redis.createClient(6379,"10.58.8.81");
+var client= redis.createClient(6379,"47.105.36.188",{password:"test123"});
+// var client= redis.createClient(6379,"10.58.8.81");
 router.post('/seckill', function (req, res) {
     count++
     client.multi().get('counter').decr("counter").execAsync().then(function(reply) {
